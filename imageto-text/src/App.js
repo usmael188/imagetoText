@@ -11,7 +11,7 @@ function App() {
     formData.append('image', selectedImage);
 
     try {
-      const response = await axios.post('http://localhost:5000', formData);
+      const response = await axios.post('https://image-to-text-5cgq.onrender.com', formData);
       const cleanedText = response.data;
       setCleanedText(cleanedText);
       setError(null);
