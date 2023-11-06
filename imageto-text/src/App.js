@@ -16,7 +16,7 @@ function App() {
 
     try {
       const response = await axios.post(
-        "http://usmael.pythonanywhere.com/",
+        "https://usmael.pythonanywhere.com/",
         formData
       );
       const cleanedText = response.data;
