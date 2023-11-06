@@ -11,7 +11,7 @@ function App() {
     formData.append('image', selectedImage);
 
     try {
-      const response = await axios.post('https://image-to-text-5cgq.onrender.com/', formData);
+      const response = await axios.post('http://usmael.pythonanywhere.com/', formData);
       const cleanedText = response.data;
       setCleanedText(cleanedText);
       setError(null);
@@ -26,9 +26,9 @@ function App() {
       {/* Navigation Bar */}
       <nav className='bg-blue-500 p-4'>
         <div className='container mx-auto flex justify-between'>
-          <h1 className='text-white text-3xl font-bold'>Image to Text App</h1>
+          <h1 className='text-white text-3xl sm:text-xl sm:font-400 font-bold'>Image to Text App</h1>
           <a href="mailto:uabdureman@gmail.com" target='_blank' rel='noopener noreferrer' className='text-white bg-blue-700 p-2 rounded'>
-            <button>Hire Me</button>
+            <button className='lg:p-2 '>Hire Me</button>
           </a>
         </div>
       </nav>
