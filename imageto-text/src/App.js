@@ -103,37 +103,24 @@ function App() {
                 className="w-full max-w-lg mt-4"
               />
             </div>
-
           )}
 
-<div className='flex flex-col items-center mt-8'>
-  {error && (
-    <div className='bg-red-100 text-red-500 p-2 rounded text-center mb-4'>
-      {error}
-    </div>
-  )}
-  <textarea
-    className='border-2 p-2 w-full max-w-lg h-48'
-    value={cleanedText}
-    onChange={(e) => setCleanedText(e.target.value)}
-    placeholder='Extracted text will appear here'
-  />
-</div>
-
-
-          {/* Display Cleaned Text */}
-          <div className="text-center">
-            <h1 className="text-gray-800 mt-4">Extracted Text</h1>
+          <div className="flex flex-col items-center mt-8">
+            {error && (
+              <div className="bg-red-100 text-red-500 p-2 rounded text-center mb-4">
+                {error}
+              </div>
+            )}
             <textarea
-              className="border-2 p-2 w-full h-64"
+              className="border-2 p-2 w-full max-w-lg h-48"
               value={cleanedText}
               onChange={(e) => setCleanedText(e.target.value)}
               placeholder="Extracted text will appear here"
             />
           </div>
-        </div>
 
-      
+        
+        </div>
       </div>
 
       {/* Footer */}
